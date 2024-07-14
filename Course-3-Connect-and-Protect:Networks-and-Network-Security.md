@@ -729,10 +729,137 @@ An ICMP flood attack is a type of DoS attack performed by an attacker repeatedly
 
 A ping of death attack is a type of DoS attack that is caused when a hacker pings a system by sending it an oversized ICMP packet that is bigger than 64 kilobytes, the maximum size for a correctly formed ICMP packet. Pinging a vulnerable network server with an oversized ICMP packet will overload the system and cause it to crash. 
 
+### Network protocol analyzer
 
+A network protocol analyzer, sometimes called a packet sniffer or a packet analyzer, is a tool designed to capture and analyze data traffic within a network. They are commonly used as investigative tools to monitor networks and identify suspicious activity. There are a wide variety of network protocol analyzers available, but some of the most common analyzers  include:
 
+    SolarWinds NetFlow Traffic Analyzer
+    ManageEngine OpManager
+    Azure Network Watcher
+    Wireshark
+    tcpdump
 
+This reading will focus exclusively on tcpdump, though you can apply what you learn here to many of the other network protocol analyzers you'll use as a cybersecurity analyst to defend against any network intrusions. In an upcoming activity, you’ll review a tcpdump data traffic log and identify a DoS attack to practice these skills. 
 
+#### tcpdump 
+
+tcpdump is a command-line network protocol analyzer. It is popular, lightweight–meaning it uses little memory and has a low CPU usage–and uses the open-source libpcap library. tcpdump is text based, meaning all commands in tcpdump are executed in the terminal. It can also be installed on other Unix-based operating systems, such as macOS®. It is preinstalled on many Linux distributions.
+
+tcpdump provides a brief packet analysis and converts key information about network traffic into formats easily read by humans. It prints information about each packet directly into your terminal. tcpdump also displays the source IP address, destination IP addresses, and the port numbers being used in the communications. 
+
+#### Interpreting output
+
+tcpdump prints the output of the command as the sniffed packets in the command line, and optionally to a log file, after a command is executed. The output of a packet capture contains many pieces of important information about the network traffic. 
+
+Some information you receive from a packet capture includes: 
+
+    Timestamp: The output begins with the timestamp, formatted as hours, minutes, seconds, and fractions of a second.  
+
+    Source IP: The packet’s origin is provided by its source IP address.
+
+    Source port: This port number is where the packet originated.
+
+    Destination IP: The destination IP address is where the packet is being transmitted to.
+
+    Destination port: This port number is where the packet is being transmitted to.
+
+Note: By default, tcpdump will attempt to resolve host addresses to hostnames. It'll also replace port numbers with commonly associated services that use these ports.
+
+#### Common uses
+
+tcpdump and other network protocol analyzers are commonly used to capture and view network communications and to collect statistics about the network, such as troubleshooting network performance issues. They can also be used to:
+
+    Establish a baseline for network traffic patterns and network utilization metrics.
+
+    Detect and identify malicious traffic
+
+    Create customized alerts to send the right notifications when network issues or security threats arise.
+
+    Locate unauthorized instant messaging (IM), traffic, or wireless access points.
+
+However, attackers can also use network protocol analyzers maliciously to gain information about a specific network. For example, attackers can capture data packets that contain sensitive information, such as account usernames and passwords. As a cybersecurity analyst, It’s important to understand the purpose and uses of network protocol analyzers. 
+
+### Real-life DDoS attack
+
+#### A DDoS targeting a widely used DNS server 
+
+DNS servers translate website domain names into the IP address of the system that contains the information for the website. For instance, if a user were to type in a website URL, a DNS server would translate that into a numeric IP address that directs network traffic to the location of the website’s server. 
+
+On the day of the DDoS attack we are studying, many large companies were using a DNS service provider. The service provider was hosting the DNS system for these companies. This meant that when internet users typed in the URL of the website they wanted to access, their devices would be directed to the right place. On October 21, 2016, the service provider was the victim of a DDoS attack.
+
+#### Leading up to the attack
+
+Before the attack on the service provider, a group of university students created a botnet with the intention to attack various gaming servers and networks. A botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder." Each computer in the botnet can be remotely controlled to send a data packet to a target system. In a botnet attack, cyber criminals instruct all the bots on the botnet to send data packets to the target system at the same time, resulting in a DDoS attack.
+
+The group of university students posted the code for the botnet online so that it would be accessible to thousands of internet users and authorities wouldn’t be able to trace the botnet back to the students. In doing so, they made it possible for other malicious actors to learn the code to the botnet and control it remotely. This included the cyber criminals who attacked the DNS service provider.
+
+#### The day of attack
+
+At 7:00 a.m. on the day of the attack, the botnet sent tens of millions of DNS requests to the service provider. This overwhelmed the system and the DNS service shut down. This meant that all of the websites that used the service provider could not be reached. When users tried to access various websites that used the service provider, they were not directed to the website they typed in their browser. Outages for each web service occurred all over North America and Europe. 
+
+The service provider’s systems were restored after only two hours of downtime. Although the cyber criminals sent subsequent waves of botnet attacks, the DNS company was prepared and able to mitigate the impact. 
+
+### Overview of interception tactics
+
+#### A closer review of packet sniffing 
+
+packet sniffing is the practice of capturing and inspecting data packets across a network. On a private network, data packets are directed to the matching destination device on the network. 
+
+The device’s Network Interface Card (NIC) is a piece of hardware that connects the device to a network. The NIC reads the data transmission, and if it contains the device’s MAC address, it accepts the packet and sends it to the device to process the information based on the protocol. This occurs in all standard network operations. However, a NIC can be set to promiscuous mode, which means that it accepts all traffic on the network, even the packets that aren’t addressed to the NIC’s device. You’ll learn more about NIC’s later in the program. Malicious actors might use software like Wireshark to capture the data on a private network and store it for later use. They can then use the personal information to their own advantage. Alternatively, they might use the IP and MAC addresses of authorized users of the private network to perform IP spoofing.
+
+#### A closer review of IP spoofing 
+
+After a malicious actor has sniffed packets on the network, they can impersonate the IP and MAC addresses of authorized devices to perform an IP spoofing attack. Firewalls can prevent IP spoofing attacks by configuring it to refuse unauthorized IP packets and suspicious traffic. Next, you’ll examine a few common IP spoofing attacks that are important to be familiar with as a security analyst.
+
+##### On-path attack
+
+An on-path attack happens when a hacker intercepts the communication between two devices or servers that have a trusted relationship. The transmission between these two trusted network devices could contain valuable information like usernames and passwords that the malicious actor can collect. An on-path attack is sometimes referred to as a meddler-in-the middle attack because the hacker is hiding in the middle of communications between two trusted parties.
+
+Or, it could be that the intercepted transmission contains a DNS system look-up. You’ll recall from an earlier video that a DNS server translates website domain names into IP addresses. If a malicious actor intercepts a transmission containing a DNS lookup, they could spoof the DNS response from the server and redirect a domain name to a different IP address, perhaps one that contains malicious code or other threats. The most important way to protect against an on-path attack is to encrypt your data in transit, e.g. using TLS. 
+
+##### Smurf attack
+
+A smurf attack is a network attack that is performed when an attacker sniffs an authorized user’s IP address and floods it with packets. Once the spoofed packet reaches the broadcast address, it is sent to all of the devices and servers on the network. 
+
+In a smurf attack, IP spoofing is combined with another denial of service (DoS) technique to flood the network with unwanted traffic. For example, the spoofed packet could include an Internet Control Message Protocol (ICMP) ping. As you learned earlier, ICMP is used to troubleshoot a network. But if too many ICMP messages are transmitted, the ICMP echo responses overwhelm the servers on the network and they shut down. This creates a denial of service and can bring an organization’s operations to a halt.
+
+An important way to protect against a smurf attack is to use an advanced firewall that can monitor any unusual traffic on the network. Most next generation firewalls (NGFW) include features that detect network anomalies to ensure that oversized broadcasts are detected before they have a chance to bring down the network.
+
+##### DoS attack
+
+As you’ve learned, once the malicious actor has sniffed the network traffic, they can impersonate an authorized user. A Denial of Service attack is a class of attacks where the attacker prevents the compromised system from performing legitimate activity or responding to legitimate traffic. Unlike IP spoofing, however, the attacker will not receive a response from the targeted host. Everything about the data packet is authorized including the IP address in the header of the packet. In IP spoofing attacks, the malicious actor uses IP packets containing fake IP addresses. The attackers keep sending IP packets containing fake IP addresses until the network server crashes.
+
+**Pro Tip**: Remember the principle of defense-in-depth. There isn’t one perfect strategy for stopping each kind of attack. You can layer your defense by using multiple strategies. In this case, using industry standard encryption will strengthen your security and help you defend from DoS attacks on more than one level. 
+
+### Glossary terms from module 3
+
+**Active packet sniffing**: A type of attack where data packets are manipulated in transit
+
+**Botnet**: A collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder"
+
+**Denial of service (DoS) attack**: An attack that targets a network or server and floods it with network traffic
+
+**Distributed denial of service (DDoS) attack**: A type of denial of service attack that uses multiple devices or servers located in different locations to flood the target network with unwanted traffic
+
+**Internet Control Message Protocol (ICMP)**: An internet protocol used by devices to tell each other about data transmission errors across the network
+
+**Internet Control Message Protocol (ICMP) flood**: A type of DoS attack performed by an attacker repeatedly sending ICMP request packets to a network server
+
+**IP spoofing**: A network attack performed when an attacker changes the source IP of a data packet to impersonate an authorized system and gain access to a network
+
+**On-path attack**: An attack where a malicious actor places themselves in the middle of an authorized connection and intercepts or alters the data in transit
+
+**Packet sniffing**: The practice of capturing and inspecting data packets across a network 
+
+**Passive packet sniffing**: A type of attack where a malicious actor connects to a network hub and looks at all traffic on the network
+
+**Ping of death**: A type of DoS attack caused when a hacker pings a system by sending it an oversized ICMP packet that is bigger than 64KB
+
+**Replay attack**: A network attack performed when a malicious actor intercepts a data packet in transit and delays it or repeats it at another time
+
+**Smurf attack**: A network attack performed when an attacker sniffs an authorized user’s IP address and floods it with ICMP packets
+
+**Synchronize (SYN) flood attack**: A type of DoS attack that simulates a TCP/IP connection and floods a server with SYN packets
 
 
 
@@ -744,6 +871,70 @@ A ping of death attack is a type of DoS attack that is caused when a hacker ping
     Describe network and cloud hardening techniques that target network vulnerabilities
     Describe network hardening techniques
     Explain cloud security practices
+
+### Brute force attacks and OS hardening
+
+#### Brute force attacks
+
+A brute force attack is a trial-and-error process of discovering private information. There are different types of brute force attacks that malicious actors use to guess passwords, including: 
+
+    Simple brute force attacks. When attackers try to guess a user's login credentials, it’s considered a simple brute force attack. They might do this by entering any combination of usernames and passwords that they can think of until they find the one that works.
+
+    Dictionary attacks use a similar technique. In dictionary attacks, attackers use a list of commonly used passwords and stolen credentials from previous breaches to access a system. These are called “dictionary” attacks because attackers originally used a list of words from the dictionary to guess the passwords, before complex password rules became a common security practice. 
+
+Using brute force to access a system can be a tedious and time consuming process, especially when it’s done manually. There are a range of tools attackers use to conduct their attacks. 
+
+#### Assessing vulnerabilities
+
+Before a brute force attack or other cybersecurity incident occurs, companies can run a series of tests on their network or web applications to assess vulnerabilities. Analysts can use virtual machines and sandboxes to test suspicious files, check for vulnerabilities before an event occurs, or to simulate a cybersecurity incident.
+
+##### Virtual machines (VMs)
+
+Virtual machines (VMs) are software versions of physical computers. VMs provide an additional layer of security for an organization because they can be used to run code in an isolated environment, preventing malicious code from affecting the rest of the computer or system. VMs can also be deleted and replaced by a pristine image after testing malware. 
+
+VMs are useful when investigating potentially infected machines or running malware in a constrained environment. Using a VM may prevent damage to your system in the event its tools are used improperly. VMs also give you the ability to revert to a previous state. However, there are still some risks involved with VMs. There’s still a small risk that a malicious program can escape virtualization and access the host machine. 
+
+You can test and explore applications easily with VMs, and it’s easy to switch between different VMs from your computer. This can also help in streamlining many security tasks.
+
+##### Sandbox environments
+
+A sandbox is a type of testing environment that allows you to execute software or programs separate from your network. They are commonly used for testing patches, identifying and addressing bugs, or detecting cybersecurity vulnerabilities. Sandboxes can also be used to evaluate suspicious software, evaluate files containing malicious code, and simulate attack scenarios. 
+
+Sandboxes can be stand-alone physical computers that are not connected to a network; however, it is often more time- and cost-effective to use software or cloud-based virtual machines as sandbox environments. Note that some malware authors know how to write code to detect if the malware is executed in a VM or sandbox environment. Attackers can program their malware to behave as harmless software when run inside these types of  testing environments. 
+
+#### Prevention measures
+
+Some common measures organizations use to prevent brute force attacks and similar attacks from occurring include: 
+
+1. Salting and hashing: Hashing converts information into a unique value that can then be used to determine its integrity. It is a one-way function, meaning it is impossible to decrypt and obtain the original text. Salting adds random characters to hashed passwords. This increases the length and complexity of hash values, making them more secure.
+
+2. Multi-factor authentication (MFA) and two-factor authentication (2FA): MFA is a security measure which requires a user to verify their identity in two or more ways to access a system or network. This verification happens using a combination of authentication factors: a username and password, fingerprints, facial recognition, or a one-time password (OTP) sent to a phone number or email. 2FA is similar to MFA, except it uses only two forms of verification.
+
+3. CAPTCHA and reCAPTCHA: CAPTCHA stands for Completely Automated Public Turing test to tell Computers and Humans Apart. It asks users to complete a simple test that proves they are human. This helps prevent software from trying to brute force a password. reCAPTCHA is a free CAPTCHA service from Google that helps protect websites from bots and malicious software.
+
+4. Password policies: Organizations use password policies to standardize good password practices throughout the business. Policies can include guidelines on how complex a password should be, how often users need to update passwords, whether passwords can be reused or not, and if there are limits to how many times a user can attempt to log in before their account is suspended.
+
+
+### 
+
+
+
+
+
+### 
+
+
+
+
+
+
+
+### 
+
+
+
+
+
 
 
 
