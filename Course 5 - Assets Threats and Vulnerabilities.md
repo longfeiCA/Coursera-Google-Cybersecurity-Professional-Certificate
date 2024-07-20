@@ -1314,21 +1314,362 @@ These are common types of social engineering to watch out for:
 
 Attackers might use any of these techniques to gain unauthorized access to an organization. Everyone is vulnerable to them, from entry-level employees to senior executives. However, you can reduce the risks of social engineering attacks at any business by teaching others what to expect.
 
+#### Encouraging caution
 
+Spreading awareness usually starts with comprehensive security training. When it comes to social engineering, there are three main areas to focus on when teaching others:
 
+    Stay alert of suspicious communications and unknown people, especially when it comes to email. For example, look out for spelling errors and double-check the sender's name and email address.
 
+    Be cautious about sharing information, especially over social media. Threat actors often search these platforms for any information they can use to their advantage.
 
+    Control curiosity when something seems too good to be true. This can include wanting to click on attachments or links in emails and advertisements.
 
+Pro tip: Implementing technologies like firewalls, multi-factor authentication (MFA), block lists, email filtering, and others helps layers the defenses should someone make a mistake.
 
+Ideally, security training extends beyond employees. Educating customers about social engineering threats is also a key to mitigating these threats. And security analysts play an important part in promoting safe practices. For example, a big part of an analyst's job is testing systems and documenting best practices for others at an organization to follow.
 
+### Types of phishing
 
+Phishing is one of the most common types of social engineering, which are manipulation techniques that exploit human error to gain private information, access, or valuables. Sometimes, phishing attacks appear to come from a trusted person or business. This can lead unsuspecting recipients into acting against their better judgment, causing them to break security procedures. 
 
+#### The origins of phishing
 
+Phishing has been around since the early days of the internet. It can be traced back to the 1990s. At the time, people across the world were coming online for the first time. As the internet became more accessible it began to attract the attention of malicious actors. These malicious actors realized that the internet gave them a level of anonymity to commit their crimes.
 
+##### Early persuasion tactics
 
+One of the earliest instances of phishing was aimed at a popular chat service called AOL Instant Messenger (AIM). Users of the service began receiving emails asking them to verify their accounts or provide personal billing information. The users were unaware that these messages were sent by malicious actors pretending to be service providers.
 
+This was one of the first examples of mass phishing, which describes attacks that send malicious emails out to a large number of people, increasing the likelihood of baiting someone into the trap.
 
+During the AIM attacks, malicious actors carefully crafted emails that appeared to come directly from AOL. The messages used official logos, colors, and fonts to trick unsuspecting users into sharing their information and account details.
 
+Attackers used the stolen information to create fraudulent AOL accounts they could use to carry out other crimes anonymously. AOL was forced to adapt their security policies to address these threats. The chat service began including messages on their platforms to warn users about phishing attacks.
 
+##### How phishing has evolved
 
+Phishing continued evolving at the turn of the century as businesses and newer technologies began entering the digital landscape. In the early 2000s, e-commerce and online payment systems started to become popular alternatives to traditional marketplaces. The introduction of online transactions presented new opportunities for attackers to commit crimes.
+
+A number of techniques began to appear around this time period, many of which are still used today. There are five common types of phishing that every security analyst should know:
+
+    Email phishing is a type of attack sent via email in which threat actors send messages pretending to be a trusted person or entity.
+
+    Smishing is a type of phishing that uses Short Message Service (SMS), a technology that powers text messaging. Smishing covers all forms of text messaging services, including Apple’s iMessages, WhatsApp, and other chat mediums on phones.
+
+    Vishing refers to the use of voice calls or voice messages to trick targets into providing personal information over the phone.
+
+    Spear phishing is a subset of email phishing in which specific people are purposefully targeted, such as the accountants of a small business.
+
+    Whaling refers to a category of spear phishing attempts that are aimed at high-ranking executives in an organization.
+
+Since the early days of phishing, email attacks remain the most common types that are used. While they were originally used to trick people into sharing access credentials and credit card information, email phishing became a popular method to infect computer systems and networks with malicious software.
+
+In late 2003, attackers around the world created fraudulent websites that resembled businesses like eBay and PayPal™. Mass phishing campaigns to distribute malicious programs were also launched against e-commerce and banking sites.
+
+##### Recent trends
+
+Starting in the 2010s, attackers began to shift away from mass phishing attempts that relied on baiting unsuspecting people into a trap. Leveraging new technologies, criminals began carrying out what’s known as targeted phishing attempts. Targeted phishing describes attacks that are sent to specific targets using highly customized methods to create a strong sense of familiarity.
+
+A type of targeted phishing that evolved in the 2010s is angler phishing. Angler phishing is a technique where attackers impersonate customer service representatives on social media. This tactic evolved from people’s tendency to complain about businesses online. Threat actors intercept complaints from places like message boards or comment sections and contact the angry customer via social media. Like the AIM attacks of the 1990s, they use fraudulent accounts that appear similar to those of actual businesses. They then trick the angry customers into sharing sensitive information with the promise of fixing their problem.
+
+### An introduction to malware
+
+Malware is software designed to harm devices or networks
+
+#### Virus
+
+A virus is malicious code written to interfere with computer operations and cause damage to data and software. This type of malware must be installed by the target user before it can spread itself and cause damage. One of the many ways that viruses are spread is through phishing campaigns where malicious links are hidden within links or attachments.
+
+#### Worm
+
+A worm is malware that can duplicate and spread itself across systems on its own. Similar to a virus, a worm must be installed by the target user and can also be spread with tactics like malicious email. Given a worm's ability to spread on its own, attackers sometimes target devices, drives, or files that have shared access over a network.
+
+A well known example is the Blaster worm, also known as Lovesan, Lovsan, or MSBlast. In the early 2000s, this worm spread itself on computers running Windows XP and Windows 2000 operating systems. It would force devices into a continuous loop of shutting down and restarting. Although it did not damage the infected devices, it was able to spread itself to hundreds of thousands of users around the world. Many variants of the Blaster worm have been deployed since the original and can infect modern computers.
+
+Note: Worms were very popular attacks in the mid 2000s but are less frequently used in recent years.
+
+#### Trojan
+
+A trojan, also called a Trojan horse, is malware that looks like a legitimate file or program. This characteristic relates to how trojans are spread. Similar to viruses, attackers deliver this type of malware hidden in file and application downloads. Attackers rely on tricking unsuspecting users into believing they’re downloading a harmless file, when they’re actually infecting their own device with malware that can be used to spy on them, grant access to other devices, and more.
+
+#### Adware
+
+Advertising-supported software, or adware, is a type of legitimate software that is sometimes used to display digital advertisements in applications. Software developers often use adware as a way to lower their production costs or to make their products free to the public—also known as freeware or shareware. In these instances, developers monetize their product through ad revenue rather than at the expense of their users.
+
+Malicious adware falls into a sub-category of malware known as a potentially unwanted application (PUA). A PUA is a type of unwanted software that is bundled in with legitimate programs which might display ads, cause device slowdown, or install other software. Attackers sometimes hide this type of malware in freeware with insecure design to monetize ads for themselves instead of the developer. This works even when the user has declined to receive ads.
+
+#### Spyware
+
+Spyware is malware that's used to gather and sell information without consent. It's also considered a PUA. Spyware is commonly hidden in bundleware, additional software that is sometimes packaged with other applications. PUAs like spyware have become a serious challenge in the open-source software development ecosystem. That’s because developers tend to overlook how their software could be misused or abused by others.
+
+#### Scareware
+
+Another type of PUA is scareware. This type of malware employs tactics to frighten users into infecting their own device. Scareware tricks users by displaying fake warnings that appear to come from legitimate companies. Email and pop-ups are just a couple of ways scareware is spread. Both can be used to deliver phony warnings with false claims about the user's files or data being at risk.
+
+#### Fileless malware
+
+Fileless malware does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer. This type of infection resides in memory where the malware never touches the hard drive. This is unlike the other types of malware, which are stored within a file on disk. Instead, these stealthy infections get into the operating system or hide within trusted applications.
+
+Pro tip: Fileless malware is detected by performing memory analysis, which requires experience with operating systems. 
+
+#### Rootkits
+
+A rootkit is malware that provides remote, administrative access to a computer. Most attackers use rootkits to open a backdoor to systems, allowing them to install other forms of malware or to conduct network security attacks.
+
+This kind of malware is often spread by a combination of two components: a dropper and a loader. A dropper is a type of malware that comes packed with malicious code which is delivered and installed onto a target system. For example, a dropper is often disguised as a legitimate file, such as a document, an image, or an executable to deceive its target into opening, or dropping it, onto their device. If the user opens the dropper program, its malicious code is executed and it hides itself on the target system.
+
+Multi-staged malware attacks, where multiple packets of malicious code are deployed, commonly use a variation called a loader. A loader is a type of malware that downloads strains of malicious code from an external source and installs them onto a target system. Attackers might use loaders for different purposes, such as to set up another type of malware---a botnet.
+
+#### Botnet
+
+A botnet, short for “robot network,” is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder.” Viruses, worms, and trojans are often used to spread the initial infection and turn the devices into a bot for the bot-herder. The attacker then uses file sharing, email, or social media application protocols to create new bots and grow the botnet. When a target unknowingly opens the malicious file, the computer, or bot, reports the information back to the bot-herder, who can execute commands on the infected computer.
+
+#### Ransomware
+
+Ransomware describes a malicious attack where threat actors encrypt an organization's data and demand payment to restore access. According to the Cybersecurity and Infrastructure Security Agency (CISA), ransomware crimes are on the rise and becoming increasingly sophisticated. Ransomware infections can cause significant damage to an organization and its customers. An example is the 
+WannaCry attack that encrypts a victim's computer until a ransom payment of cryptocurrency is paid.
+
+### Prevent injection attacks
+
+ Malicious SQL injection is a type of attack that executes unexpected queries on a database. Threat actors perform SQL injections to modify, delete, or steal information from databases. A SQL injection is a common attack vector that is used to gain unauthorized access to web applications. Due to the language's popularity with developers, SQL injections are regularly listed in the OWASP® Top 10 because developers tend to focus on making their applications work correctly rather than protecting their products from injection.
+
+#### SQL injection categories
+There are three main categories of SQL injection: 
+
+    In-band
+    Out-of-band
+    Inferential
+
+##### In-band SQL injection
+
+In-band, or classic, SQL injection is the most common type. An in-band injection is one that uses the same communication channel to launch the attack and gather the results.
+
+For example, this might occur in the search box of a retailer's website that lets customers find products to buy. If the search box is vulnerable to injection, an attacker could enter a malicious query that would be executed in the database, causing it to return sensitive information like user passwords. The data that's returned is displayed back in the search box where the attack was initiated.
+
+##### Out-of-band SQL injection
+
+An out-of-band injection is one that uses a different communication channel  to launch the attack and gather the results.
+
+For example, an attacker could use a malicious query to create a connection between a vulnerable website and a database they control. This separate channel would allow them to bypass any security controls that are in place on the website's server, allowing them to steal sensitive data.
+
+Note: Out-of-band injection attacks are very uncommon because they'll only work when certain features are enabled on the target server.
+
+##### Inferential SQL injection
+
+Inferential SQL injection occurs when an attacker is unable to directly see the results of their attack. Instead, they can interpret the results by analyzing the behavior of the system.
+
+For example, an attacker might perform a SQL injection attack on the login form of a website that causes the system to respond with an error message. Although sensitive data is not returned, the attacker can figure out the database's structure based on the error. They can then use this information to craft attacks that will give them access to sensitive data or to take control of the system.
+
+#### Injection Prevention
+
+SQL queries are often programmed with the assumption that users will only input relevant information. For example, a login form that expects users to input their email address assumes the input will be formatted a certain way, such as jdoe@domain.com. Unfortunately, this isn’t always the case.
+
+A key to preventing SQL injection attacks is to escape user inputs—preventing someone from inserting any code that a program isn't expecting.
+
+There are several ways to escape user inputs:
+
+    Prepared statements: a coding technique that executes SQL statements before passing them on to a database
+
+    Input sanitization: programming that removes user input which could be interpreted as code.
+
+    Input validation: programming that ensures user input meets a system's expectations.
+
+Using a combination of these techniques can help prevent SQL injection attacks. In the security field, you might need to work closely with application developers to address vulnerabilities that can lead to SQL injections. 
+OWASP's SQL injection detection techniques
+ is a useful resource if you're interested in investigating SQL injection vulnerabilities on your own.
+
+### Threat modeling process
+
+Defending the application layer requires proper testing to uncover weaknesses that can lead to risk. Threat modeling is one of the primary ways to ensure that an application meets security requirements. A DevSecOps team, which stands for development, security, and operations, usually performs these analyses.
+
+A typical threat modeling process is performed in a cycle:
+
+1. Define the scope
+2. Identify threats
+3. Characterize the environment
+4. Analyze threats
+5. Mitigate risks
+6. Evaluate findings
+
+Ideally, threat modeling should be performed before, during, and after an application is developed. However, conducting a thorough software analysis takes time and resources. Everything from the application's architecture to its business purposes should be evaluated. As a result, a number of threat-modeling frameworks have been developed over the years to make the process smoother. 
+
+Note: Threat modeling should be incorporated at every stage of the software development lifecycle, or SDLC.
+
+### Traits of an effective threat model
+
+Threat modeling is the process of identifying assets, their vulnerabilities, and how each is exposed to threats. It is a strategic approach that combines various security activities, such as vulnerability management, threat analysis, and incident response. Security teams commonly perform these exercises to ensure their systems are adequately protected. Another use of threat modeling is to proactively find ways of reducing risks to any system or business process. Traditionally, threat modeling is associated with the field of application development.
+
+### Common frameworks
+
+When performing threat modeling, there are multiple methods that can be used, such as:
+
+    STRIDE
+    PASTA
+    Trike
+    VAST
+
+Organizations might use any one of these to gather intelligence and make decisions to improve their security posture. Ultimately, the “right” model depends on the situation and the types of risks an application might face.
+
+#### STRIDE 
+
+STRIDE is a threat-modeling framework developed by Microsoft. It’s commonly used to identify vulnerabilities in six specific attack vectors. The acronym represents each of these vectors: spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege.
+
+#### PASTA
+
+The Process of Attack Simulation and Threat Analysis (PASTA) is a risk-centric threat modeling process developed by two OWASP leaders and supported by a cybersecurity firm called VerSprite. Its main focus is to discover evidence of viable threats and represent this information as a model. PASTA's evidence-based design can be applied when threat modeling an application or the environment that supports that application. Its seven stage process consists of various activities that incorporate relevant security artifacts of the environment, like vulnerability assessment reports.
+
+#### Trike 
+
+Trike is an open source methodology and tool that takes a security-centric approach to threat modeling. It's commonly used to focus on security permissions, application use cases, privilege models, and other elements that support a secure environment.
+
+#### VAST
+
+The Visual, Agile, and Simple Threat (VAST) Modeling framework is part of an automated threat-modeling platform called ThreatModeler®. Many security teams opt to use VAST as a way of automating and streamlining their threat modeling assessments.
+
+### Participating in threat modeling
+Threat modeling is often performed by experienced security professionals, but it’s almost never done alone. This is especially true when it comes to securing applications. Programs are complex systems responsible for handling a lot of data and processing a variety of commands from users and other systems.
+
+One of the keys to threat modeling is asking the right questions:
+
+    What are we working on?
+    What kinds of things can go wrong?
+    What are we doing about it?
+    Have we addressed everything?
+    Did we do a good job?
+
+It takes time and practice to learn how to work with things like data flow diagrams and attack trees. However, anyone can learn to be an effective threat modeler. Regardless of your level of experience, participating in one of these exercises always starts with simply asking the right questions.
+
+### Apply the PASTA threat model framework
+
+#### Stage I: Define business and security objectives
+
+Summary: These objectives are defined early by asking broad questions about the purpose of the application. For example, how does the app make the business money? Understanding the answer to these questions helps guide the detailed work that will follow.
+
+Recommendations: A shopping application like this will need to process payments. Based on this description, we know certain technologies are required to keep information private and secure and that everything will need to be compliant with PCI-DSS.
+
+#### Stage II: Define the technical scope
+
+Summary: The objective here is to understand the attack surface by identifying the technologies being used by the application and understanding their dependencies.
+
+Recommendations: APIs facilitate the exchange of data between customers, partners, and employees, so they should be prioritized. They handle a lot of sensitive data while they connect various users and systems together. However, details such as which APIs are being used should be considered before prioritizing one technology over another. So, they can be more prone to security vulnerabilities because there’s a larger attack surface.
+
+#### Stage III: Decompose the application
+
+Summary: Stage three builds upon the previous stage by investigating how the application's components communicate together. The objective here is to review how the application works and how security controls are currently implemented.
+
+Recommendations: The sample data flow diagram shows how a typical search request passes through multiple layers. One thing you might review here would be to ensure the MySQL database is using prepared statements when queries are input.
+
+#### Stage IV: Threat analysis
+
+Summary: The main objective of stage four is to consider the types of threats that might affect your application. This relates to the technologies you've already scoped. Another thing to consider is the types of data your application will be processing.
+
+Recommendations: Injection attacks are common for SQL databases. Session hijacking is possible because the app communicates cookies between multiple layers.  It's important to consider your technological attack surface and any relevant threats to your product to effectively implement your information security responsibilities.
+
+#### Stage V: Vulnerability analysis
+
+Summary: Stage five is about associating asset vulnerabilities with potential threats. The objective here is to identify what is wrong with the design of the app or its codebase based on your security testing.
+
+Recommendations:  A lack of prepared statements can make our SQL database vulnerable to injection attacks. And session hijacking is possible if cookies are mishandled between input and output sources.
+
+#### Stage VI: Attack modeling
+
+Summary: In this stage, the objective is to link the threats and vulnerabilities identified in the previous steps using attack trees. The purpose of using attack trees here is to show that the potential threats that you've identified are actually viable.  Resources like MITRE ATT&CK and the CVE® list are useful references to find evidence that validates the information that you've modeled in your attack tree.
+
+Recommendations: This sample attack tree models how user data is vulnerable to the attacks that were identified earlier. Like the sample data flow diagram, an actual attack tree for a mobile application would be much more complex than this.
+
+#### Stage VII: Risk analysis and impact
+
+Summary: The objective of the final stage of PASTA is to identify ways to mitigate the risks that were identified from stages IV - VI and plan for any remaining risks that can't be remediated.
+
+Recommendations: SHA-256, incident response procedures, password policy, and principle of least privilege are a few examples of technical, operational, and managerial controls that can be implemented before launch to reduce risk.
+
+### Glossary terms from module 4
+
+**Angler phishing**: A technique where attackers impersonate customer service representatives on social media 
+
+**Advanced persistent threat (APT)**: Instances when a threat actor maintains unauthorized access to a system for an extended period of time 
+
+**Adware**: A type of legitimate software that is sometimes used to display digital advertisements in applications
+
+**Attack tree**: A diagram that maps threats to assets
+
+**Baiting**: A social engineering tactic that tempts people into compromising their security
+
+**Botnet**: A collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder"
+
+**Cross-site scripting (XSS)**: An injection attack that inserts code into a vulnerable website or web application
+
+**Cryptojacking**: A form of malware that installs software to illegally mine cryptocurrencies 
+
+**DOM-based XSS attack**: An instance when malicious script exists in the webpage a browser loads
+
+**Dropper**: A type of malware that comes packed with malicious code which is delivered and installed onto a target system
+
+**Fileless malware**: Malware that does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer
+
+**Hacker**: Any person or group who uses computers to gain unauthorized access to data
+
+**Identity and access management (IAM)**: A collection of processes and technologies that helps organizations manage digital identities in their environment 
+
+**Injection attack**: Malicious code inserted into a vulnerable application
+
+**Input validation**: Programming that validates inputs from users and other programs
+
+**Intrusion detection system (IDS)**: An application that monitors system activity and alerts on possible intrusions
+
+**Loader**: A type of malware that downloads strains of malicious code from an external source and installs them onto a target system
+
+**Malware**: Software designed to harm devices or networks
+
+**Process of Attack Simulation and Threat Analysis (PASTA)**: A popular threat modeling framework that’s used across many industries
+
+**Phishing**: The use of digital communications to trick people into revealing sensitive data or deploying malicious software
+
+**Phishing kit**: A collection of software tools needed to launch a phishing campaign
+
+**Prepared statement**: A coding technique that executes SQL statements before passing them onto the database 
+
+**Potentially unwanted application (PUA)**: A type of unwanted software that is bundled in with legitimate programs which might display ads, cause device slowdown, or install other software
+
+**Quid pro quo**: A type of baiting used to trick someone into believing that they’ll be rewarded in return for sharing access, information, or money
+
+**Ransomware**: Type of malicious attack where attackers encrypt an organization’s data and demand payment to restore access
+
+**Reflected XSS attack**: An instance when malicious script is sent to a server and activated during the server’s response 
+
+**Rootkit**: Malware that provides remote, administrative access to a computer
+
+**Scareware**: Malware that employs tactics to frighten users into infecting their device
+
+**Smishing**: The use of text messages to trick users to obtain sensitive information or to impersonate a known source
+
+**Social engineering**: A manipulation technique that exploits human error to gain private information, access, or valuables
+
+**Spear phishing**: A malicious email attack targeting a specific user or group of users, appearing to originate from a trusted source
+
+**Spyware**: Malware that’s used to gather and sell information without consent
+
+**SQL (Structured Query Language)**: A programming language used to create, interact with, and request information from a database
+
+**SQL injection**: An attack that executes unexpected queries on a database
+
+**Stored XSS attack**: An instance when malicious script is injected directly on the server
+
+**Tailgating**: A social engineering tactic in which unauthorized people follow an authorized person into a restricted area
+
+**Threat**: Any circumstance or event that can negatively impact assets
+
+**Threat actor**: Any person or group who presents a security risk
+
+**Threat modeling**: The process of identifying assets, their vulnerabilities, and how each is exposed to threats
+
+**Trojan horse**: Malware that looks like a legitimate file or program
+
+**Vishing**: The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source
+
+**Watering hole attack**: A type of attack when a threat actor compromises a website frequently visited by a specific group of users
+
+**Whaling**: A category of spear phishing attempts that are aimed at high-ranking executives in an organization
+
+**Web-based exploits**: Malicious code or behavior that’s used to take advantage of coding flaws in a web application
 
